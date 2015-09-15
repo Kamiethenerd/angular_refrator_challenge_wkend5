@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="container")
+    button(class="btn btn-info get") Get Info
+    div(class="col-md-4" ng-controller="MainForm")
+      form(novalidate class="simple-form")
+        div
+        p Task:
+        input(type="text" ng-model="items.text")
+        input(type="submit" ng-click="update(items)" class="btn btn-info post" value="Create Task")
+  .someContainer#container
+      div(ng-repeat-start="items in ToDos")
+
+
